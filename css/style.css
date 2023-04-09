@@ -1,0 +1,550 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+:root{
+    --transition:.4s;
+    --main-color:#343434;
+    --p-color:#748182;
+    --section-background:#f7f7f7;
+}
+ul{
+    list-style: none;
+}
+a{
+    text-decoration: none;
+}
+body{
+    font-family: 'Poppins', sans-serif; 
+}
+.main-title{
+    text-align: center;
+    font-weight: bold;
+    font-size: calc(24px + 2vw);
+    color: var(--main-color);
+    overflow: hidden;
+    margin: auto;
+    position: relative;
+    width: fit-content;
+    z-index: 1;
+ 
+}
+.main-title::after{
+    content: "";
+    position: absolute;
+    background-image: url(img/asset\ 13.png);
+    background-repeat: repeat;
+    width: 100%;
+    height: 40%;
+    margin: auto;
+    left: 50%;
+    top: 32px;
+    overflow: hidden;
+    transform: translateX(-50%);
+    -webkit-transform: translateX(-50%);
+    z-index: -1;
+}
+/* start nav */
+.navbar{
+    z-index: 999;
+    background-color: #00000062;
+}
+.navbar ul >li:first-child:after{
+    content: "";
+    position: absolute;
+    border-bottom: 3px solid white;
+    bottom: 14px;
+    left: 24px;
+    width: 50%;
+}
+@media (max-width:992px){
+    .navbar ul >li:first-child:after{
+        width: 16%;
+    }
+}
+.navbar li{
+    position: relative;
+}
+
+.navbar ul li:not(:first-of-type):after{
+    content: "";
+    position: absolute;
+    transform: translateX(0);
+    bottom: 14px;
+    border-bottom: 3px solid white;
+    width: 0;
+    transition: var(--transition);
+    -webkit-transition: var(--transition);
+    -moz-transition: var(--transition);
+    -ms-transition: var(--transition);
+    -o-transition: var(--transition);
+    -webkit-transform: translateX(0);
+    -moz-transform: translateX(0);
+    -ms-transform: translateX(0);
+    -o-transform: translateX(0);
+}
+.navbar ul li:not(:first-of-type):hover::after{
+    width: 50%;
+    transform: translateX(50%);
+    -webkit-transform: translateX(50%);
+    -moz-transform: translateX(50%);
+    -ms-transform: translateX(50%);
+    -o-transform: translateX(50%);
+}
+@media (max-width:992px){
+    /* .navbar ul li:not(:first-of-type):after{
+        transform: translateX(-30%);
+        -webkit-transform: translateX(-30%);
+        -moz-transform: translateX(-30%);
+        -ms-transform: translateX(-30%);
+        -o-transform: translateX(-30%); */
+}
+    .navbar ul li:not(:first-of-type):hover::after{
+        width: 20%;
+        transform: translateX(20%);
+        -webkit-transform: translateX(20%);
+        -moz-transform: translateX(20%);
+        -ms-transform: translateX(20%);
+        -o-transform: translateX(20%);
+}
+
+/* start home */
+.home{
+    background-image: url(img/asset\ 12.jpeg);
+    background-size: cover;
+}
+.home .layer{
+    background-color: rgba(0, 0, 0, .65);
+}
+.home .text h2{
+    font-size: calc(22px + 1vw);
+}
+.home .text h2::after{
+    content:" ";
+    animation: 6s typing infinite  linear;
+    -webkit-animation: 6s typing infinite  linear;
+}
+@keyframes typing{
+    0%{
+        content: " |";
+    }
+    3%{
+        content: "D |";
+    }
+    6%{
+        content: "De |";
+    }
+    9%{
+        content: "Des |";
+    }
+    12%{
+        content: "Desi |";
+    }
+    15%{
+        content: "Desig |";
+    }
+    18%{
+        content: "Design |";
+    }
+    21%{
+        content: "Designe |";
+    }
+    24%{
+        content: "Designer |";
+    }
+    27%{
+        content: "Designe |";
+    }
+    30%{
+        content: "Design |";
+    }
+    33%{
+        content: "Desig |";
+    }
+    36%{
+        content: "Desi |";
+    }
+    39%{
+        content: "Des |";
+    }
+    42%{
+        content: "De |";
+    }
+    45%{
+        content: "D |";
+    }
+    48%{
+        content: " |";
+    }
+    51%{
+        content: "D |";
+    }
+    54%{
+        content: "De |";
+    }
+    57%{
+        content: "Dev |";
+    }
+    60%{
+        content: "Deve |";
+    }
+    63%{
+        content: "Devel |";
+    }
+    66%{
+        content: "Develo |";
+    }
+    69%{
+        content: "Develop |";
+    }
+    72%{
+        content: "Develope |";
+    }
+    75%{
+        content: "Developer |";
+    }
+    78%{
+        content: "Develope |";
+    }
+    81%{
+        content: "Develop |";
+    }
+    84%{
+        content: "Develo|";
+    }
+    87%{
+        content: "Devel |";
+    }
+    90%{
+        content: "Deve |";
+    }
+    93%{
+        content: "Dev |";
+    }
+    96%{
+        content: "De |";
+    }
+    99%{
+        content: "D |";
+    }
+    100%{
+        content: "";
+    }
+}
+.home .icons i{
+    width: 35px;
+    height: 35px;
+    background-color: rgb(0, 0, 0, .3); 
+    cursor: pointer;
+}
+/* start about */
+.about .img .dot{
+    position: absolute;
+    left: 80px;
+    bottom: -15px;
+    background-image: url(img/asset\ 13.png);
+    background-repeat: repeat;
+    z-index: -1;
+    width: 50%;
+    height: 50%;
+}
+.about .info >span{
+    color: #777; 
+    font-size: 14px;
+    letter-spacing: 2px;
+}
+.about .info > p{
+    color: var(--p-color);
+}
+.progress{
+    height: 1.8rem;
+}
+.about button {
+     margin-top: 20px;
+     padding: 10px 30px;
+     border-radius: 8px;
+     -webkit-border-radius: 8px;
+     -moz-border-radius: 8px;
+     -ms-border-radius: 8px;
+     -o-border-radius: 8px;
+     transition: var(--transition);
+     -webkit-transition: var(--transition);
+     -moz-transition: var(--transition);
+     -ms-transition: var(--transition);
+     -o-transition: var(--transition);
+}
+.about .black{
+    background-color: black;
+}
+.about .black a{
+    color: white;
+}
+.about .black:hover{
+    background-color: white;
+    color: black;
+    border: 1px solid black;
+}
+.about .black:hover a{
+    color: black;
+}
+.about .white{
+    background-color: white;
+}
+.about .white a{
+    color: black;
+}
+
+.about .white:hover{
+    background-color: black;
+}
+.about .white:hover a{
+    color: white;
+}
+/* start services */
+.services{
+    background-color: var(--section-background);
+}
+.services .box{
+    padding: 50px 20px;
+    margin-bottom: 10px;
+}
+.services .box i{
+    width: 70px;
+    height: 70px;
+    background-color:#f4f4f4 ;
+    transition: var(--transition);
+    -webkit-transition: var(--transition);
+    -moz-transition: var(--transition);
+    -ms-transition: var(--transition);
+    -o-transition: var(--transition);
+}
+.services .box:hover i{
+    background-color: var(--main-color);
+    color: white;
+}
+.services .box p{
+ color: var(--p-color);
+}
+/* start portifolio */
+.portifolio .layer{
+ top: 0;
+ bottom: 0;
+ right: 0;
+ left: 0;
+ background-color: rgba(255, 255, 255, .95);
+ opacity: 0;
+ transition: var(--transition);
+ -webkit-transition: var(--transition);
+ -moz-transition: var(--transition);
+ -ms-transition: var(--transition);
+ -o-transition: var(--transition);
+}
+.portifolio .img:hover .layer{
+    opacity: 1;
+}
+.portifolio .layer h6{
+    letter-spacing: 2px;
+}
+.portifolio i{
+    width: 40px;
+    height: 40px;
+    color: white;
+    background-color: #111111;
+    transition: var(--transition);
+    -webkit-transition: var(--transition);
+    -moz-transition: var(--transition);
+    -ms-transition: var(--transition);
+    -o-transition: var(--transition);
+}
+.portifolio i:hover{
+background-color: white;
+color: var(--main-color);
+}
+.portifolio .layer h6{
+    transform: translateY(-10px);
+    -webkit-transform: translateY(-10px);
+    -moz-transform: translateY(-10px);
+    -ms-transform: translateY(-10px);
+    -o-transform: translateY(-10px);
+    transition: var(--transition);
+    -webkit-transition: var(--transition);
+    -moz-transition: var(--transition);
+    -ms-transition: var(--transition);
+    -o-transition: var(--transition);
+    opacity: 0;
+}
+.portifolio .layer .icons{
+    transform: translateY(10px);
+    transition: var(--transition);
+    -webkit-transition: var(--transition);
+    -moz-transition: var(--transition);
+    -ms-transition: var(--transition);
+    -o-transition: var(--transition);
+    opacity: 0;
+}
+.portifolio .img:hover .layer h6,
+.portifolio .img:hover .layer .icons{
+    transform: translateY(0);
+    -webkit-transform: translateY(0);
+    -moz-transform: translateY(0);
+    -ms-transform: translateY(0);
+    -o-transform: translateY(0);
+    opacity: 1;
+}
+.portifolio .img{
+    transition: var(--transition);
+    -webkit-transition: var(--transition);
+    -moz-transition: var(--transition);
+    -ms-transition: var(--transition);
+    -o-transition: var(--transition);
+}
+.portifolio .img:hover {
+    border: 5px solid #777;
+}
+.nav-tabs .nav-item.show .nav-link, .nav-tabs .nav-link.active{
+    border-color: transparent;
+    color: var(--main-color);
+    position: relative;
+    transition: var(--transition);
+    -webkit-transition: var(--transition);
+    -moz-transition: var(--transition);
+    -ms-transition: var(--transition);
+    -o-transition: var(--transition);
+}
+.nav-tabs .nav-item.show .nav-link, .nav-tabs .nav-link.active::after{
+    content: "";
+    position: absolute;
+        border-bottom: 5px solid var(--main-color);
+        width: 60%;
+        bottom: 0;
+         left: 15px;
+}
+.nav-tabs .nav-link{
+    border: none;
+    color: var(--main-color);
+    font-weight: bold;
+}
+.nav-tabs{
+    border: none;
+    /* background-color: red; */
+}
+/* start testimonilas */
+.testimonials{
+    background-color: var(--section-background);
+}
+.testimonials .slide{
+   margin: 200px auto 100px;
+}
+.carousel-item > p{
+    color: var(--p-color);
+    font-size: 15px;
+}
+.carousel-item span{
+font-size: 12px;
+color:#888888 ;
+margin-bottom: 50px;
+}
+.testimonials .carousel-indicators [data-bs-target]{
+    width: 10px;
+    height: 10px;
+    bottom: 0;
+    background-color: #777;
+    border-radius: 50%;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    -ms-border-radius: 50%;
+    -o-border-radius: 50%;
+}
+/* our- statistics*/
+.statistics{
+    padding: 100px 0 70px;
+}
+.statistics .box>p{
+color: var(--p-color);
+font-size: 14px;
+font-weight: bold;
+}
+/* start blog */
+.blog{
+    background-color: var(--section-background);
+}
+.blog a{
+ border-bottom: 2px solid var(--main-color);
+}
+.blog .box .img img{
+    transition: var(--transition);
+    -webkit-transition: var(--transition);
+    -moz-transition: var(--transition);
+    -ms-transition: var(--transition);
+    -o-transition: var(--transition);
+}
+.blog .box .img:hover img{
+    transform: scale(1.1) ;
+    -webkit-transform: scale(1.1) ;
+    -moz-transform: scale(1.1) ;
+    -ms-transform: scale(1.1) ;
+    -o-transform: scale(1.1) ;
+}
+/* .blog .carousel-indicators [data-bs-target]{
+    position: relative;
+    bottom: -50px;
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    -ms-border-radius: 50%;
+    -o-border-radius: 50%;
+} */
+.owl-carousel .owl-nav button.owl-next, .owl-carousel .owl-nav button.owl-prev, .owl-carousel button.owl-dot, 
+.owl-carousel .owl-nav button.owl-prev, .owl-carousel .owl-nav button.owl-prev, .owl-carousel button.owl-dot {
+    display: none;
+}
+/* start contacts */
+.contacts .box > i{
+    width: 60px;
+    height: 60px;
+    background-color: var(--section-background);
+    transition: var(--transition);
+    -webkit-transition: var(--transition);
+    -moz-transition: var(--transition);
+    -ms-transition: var(--transition);
+    -o-transition: var(--transition);
+}
+.contacts .box:hover i{
+    background-color: var(--main-color);
+    color: white;
+}
+.contacts .box > p{
+color: var(--p-color);
+font-size: 15px;
+}
+.contacts input{
+    background-color: var(--section-background);
+    width: 85%;
+    outline: none;
+    margin-bottom: 15px;
+}
+
+.contacts textarea{
+    background-color: var(--section-background);
+    height: 20vh;
+    outline: none;
+    
+}
+.contacts button{
+    left: 35px;
+    padding: 10px 40px;
+    background-color: #111111;
+    color: white;
+    transition: var(--transition);
+    -webkit-transition: var(--transition);
+    -moz-transition: var(--transition);
+    -ms-transition: var(--transition);
+    -o-transition: var(--transition);
+}
+.contacts button:hover{
+    background-color: white;
+    color: var(--main-color);
+}
